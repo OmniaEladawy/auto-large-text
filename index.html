@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Font</title>
+    <style>
+        #txt {
+            text-align: center;
+            color: rgb(250, 148, 148);
+        }
+    </style>
+</head>
+<body>
+    <p id="txt"> Welcome to this auto large text </p>
+    
+    <script>
+        var paragraph = document.getElementById("txt");
+        paragraph.style.fontSize = "20px";
+        var larger = setInterval(function(){
+            paragraph.style.fontSize = (parseInt(paragraph.style.fontSize) + 1) + "px";
+            
+        if(paragraph.style.fontSize === "100px"){
+            clearInterval(larger);
+        }
+        } , 1000);
+    </script>
+</body>
+</html>
